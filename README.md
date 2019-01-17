@@ -42,10 +42,10 @@ To obtain the challenge text, send a payment transaction with at least the fee a
 You will get a payment transaction returned including the overpaid amount \(amount from challengeTextRequest message - transaction fees\) and a private message containing the challenge text and the signature. \(See [wiki](https://github.com/somedotone/IdentityVerification/wiki) for parameter description\)
 
 3. creating token:  
-Use the challengeText field inside the attached challengeTextResponse message as token generation data and generate the token with the account involved in the verification process. After generation, wrap the token with the following token tag \*\* Ardor Identity Verification Token \*\*. A valid token should look like this:  
-_\*\* Ardor Identity Verification Token \*\*  
-&lt;token&gt;  
-\*\* Ardor Identity Verification Token \*\*_
+Use the challengeText field inside the attached challengeTextResponse message as token generation data and generate the token with the account involved in the verification process. After generation, wrap the token with the following token tag \*\* Ardor Identity Verification Token \*\*. A valid token could look like this:  
+** Ardor Identity Verification Token **
+a0fkjvcaofrhlboq0lsnpfvnpv8mudogm1353fl3vseug3ihtkv924kmugv7g1g1bel21tt6qkgan3hdcbl9qam8c542euca3dl1v06a8vn0d0fsjalr91vou8vhlc6pgf881r4vprn3uvsg8mpu5rharhpth643
+** Ardor Identity Verification Token **
 
 4. requesting verification:  
 After posting the token on an online resource, send a payment transaction with at least the verification price to the contract runner account and attach the following message:  
