@@ -33,7 +33,6 @@ Five online resource types are supported in this contract version. Three concret
 1. \(optional\) gathering contract informations:  
 There is an infoRequest message implemented to return all necessary informations for the verification process. Just send a payment transaction with at least the fee amount of the returning payment transaction to the contract runner account and attach the following message:  
 `{"contract":"IdentityVerification","params":{"type":"infoRequest"}}`
-
 You will get a payment transaction returned including the overpaid amount \(amount from infoRequest message - transaction fees\) and a public message containing the requested informations. \(See [wiki](https://github.com/somedotone/IdentityVerification/wiki) for parameter descripion\)
 
 2. obtaining challenge text:  
