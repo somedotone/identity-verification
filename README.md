@@ -33,7 +33,7 @@ Five online resource types are supported in this contract version. Three concret
 1. \(optional\) gathering contract informations:  
 There is an infoRequest message implemented to return all necessary informations for the verification process. Just send a payment transaction with at least the fee amount of the returning payment transaction to the contract runner account and attach the following message:  
 `{"contract":"IdentityVerification","params":{"type":"infoRequest"}}`
-You will get a payment transaction returned including the overpaid amount (amount from infoRequest message - transaction fees) and a public message containing the requested informations. (See [wiki](https://github.com/somedotone/IdentityVerification/wiki) for parameter descripion)
+You will get a payment transaction returned including the overpaid amount (amount from infoRequest message - transaction fees) and a public message containing the requested informations. (See [wiki](https://github.com/somedotone/IdentityVerification/wiki) for parameter description)
 
 2. obtaining challenge text:  
 To obtain the challenge text, send a payment transaction with at least the fee amount of the returning payment transaction to the contract runner account and attach the following message:  
@@ -95,6 +95,6 @@ Have a look at the [wiki](https://github.com/somedotone/IdentityVerification/wik
 - creating a Java client library to easily interact with the contract (already in progress)
 - creating a user friendly client (web based) (in concepting phase)
 - adapting the contract to let it run with one account on two / multiple nodes (to have a backup runner)
-- implementig a proper logging system
+- implementing a proper logging system
 - decoupling the verification account from the accountVerificationRequest message to enable outsourcing of message handling. This could lead to services who pay the transaction fees and the price for a verification, so that a user can verify an account by just creating the verification token. A third party, for example, can provide this service for free or charge a user with a fiat currency, so that the user doesn't have to have any cryptocurrencies. Many other scenarios are imaginable.
 - stress testing the contract
