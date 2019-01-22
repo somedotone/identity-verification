@@ -4,7 +4,7 @@ This repository hosts the source code of the [lightweight contract](https://ardo
 
 ## Brief Description
 
-This section gives you a brief description of what the contract offers and how to interact with it. For a detailed technical description or a how to, please have a look at the project [wiki](https://github.com/somedotone/IdentityVerification/wiki).
+This section gives you a brief description of what the contract offers and how to interact with it. For a detailed technical description or a how to, please have a look at the project [wiki](https://github.com/somedotone/IdentityVerification/wiki). There is a [IdentityVerifiactionClient](https://github.com/somedotone/IdentityVerificationClient) (development) tool written in Java to support you with the interaction with the contract.
 
 ### Hackathon Challenge
 
@@ -33,12 +33,12 @@ Five online resource types are supported in this contract version. Three concret
 1. \(optional\) gathering contract informations:  
 There is an infoRequest message implemented to return all necessary informations for the verification process. Just send a payment transaction with at least the fee amount of the returning payment transaction to the contract runner account and attach the following message:  
 `{"contract":"IdentityVerification","params":{"type":"infoRequest"}}`
-You will get a payment transaction returned including the overpaid amount \(amount from infoRequest message - transaction fees\) and a public message containing the requested informations. \(See [wiki](https://github.com/somedotone/IdentityVerification/wiki) for parameter descripion\)
+You will get a payment transaction returned including the overpaid amount (amount from infoRequest message - transaction fees) and a public message containing the requested informations. (See [wiki](https://github.com/somedotone/IdentityVerification/wiki) for parameter descripion)
 
 2. obtaining challenge text:  
 To obtain the challenge text, send a payment transaction with at least the fee amount of the returning payment transaction to the contract runner account and attach the following message:  
 `{"contract":"IdentityVerification","params:{"accountRS":"<accountRS involved verification>","resources":"<resource type>","type":"challengeTextRequest"}}`  
-You will get a payment transaction returned including the overpaid amount \(amount from challengeTextRequest message - transaction fees\) and a private message containing the challenge text and the signature. \(See [wiki](https://github.com/somedotone/IdentityVerification/wiki) for parameter description\)
+You will get a payment transaction returned including the overpaid amount (amount from challengeTextRequest message - transaction fees) and a private message containing the challenge text and the signature. (See [wiki](https://github.com/somedotone/IdentityVerification/wiki) for parameter description)
 
 3. creating token:  
 Use the challengeText field inside the attached challengeTextResponse message as token generation data and generate the token with the account involved in the verification process. After generation, wrap the token with the following token tag \*\* Ardor Identity Verification Token \*\*. A valid token could look like this:  
@@ -53,7 +53,7 @@ If the token could be claimed and everything went well, the contract runner atta
 
 ### Error handling
 
-Whenever an error occurs, the contract sends back all the funds received from a user account \(minus fees for the transaction\) and attaches an error message.
+Whenever an error occurs (except when a message does not trigger the contract), the contract sends back all the funds received from a user account (minus fees for the transaction) and attaches an error message.
 
 ## Demonstration
 
@@ -62,7 +62,7 @@ There is a successfully proceed verification process on the Ardor testnet. It li
 Following transactions are involved in the verification process:
 
 1. gathering contract informations:  
-fullHash \(fH\) of **infoRequest** transaction: 0947c6921e6dc25174a8d8dcad822583040ecc065ac8e14c263dd65af220dd5c  
+fullHash (fH) of **infoRequest** transaction: 0947c6921e6dc25174a8d8dcad822583040ecc065ac8e14c263dd65af220dd5c  
 fH of **infoResponse** transaction: 5eefb338293ac631e2e47072b79b2c7a3dbffb29ce92619deb0138a6b57278da
 
 2. obtaining challenge text:  
@@ -84,5 +84,15 @@ fH of **account property** transaction:
 
 The contract was created for Ardor version 2.2.1
 
-See [https://github.com/somedotone/informations](https://github.com/somedotone/informations)
+Have a look at the [informations repo](https://github.com/somedotone/informations)
 
+## Next steps (in loose order)
+
+- updating contract to Ardor version 2.2.2
+
+- creating a Java client library to easily interact with the contract (already in progress)
+- creating a user friendly client (web based) (in concepting phase)
+- adapting the contract to let it run with one account on two / multiple nodes (to have a backup runner)
+- implementig a proper logging system
+- decoupling the verification account from the accountVerificationRequest message to enable outsourcing of message handling. This could lead to services who pay the transaction fees and the price for a verification, so that a user can verify an account by just creating the verification token. A third party, for example, can provide this service for free or charge a user with a fiat currency, so that the user doesn't have to have any cryptocurrencies. Many other scenarios are imaginable.
+- stress testing the contract
