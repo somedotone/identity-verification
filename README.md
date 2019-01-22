@@ -1,6 +1,6 @@
 # IdentityVerification
 
-This repository hosts the source code of the [lightweight contract](https://ardordocs.jelurida.com/Lightweight_Contracts) created to participate in Ardors [online hackathon](https://www.jelurida.com/ardor-hackathon-2018). It should fullfill the requirements from Coding Challenge 3 \(Identity Verification\) where a contract should be developed to implement a blockchain based reputation system for Identity verification.
+This repository hosts the source code of the [lightweight contract](https://ardordocs.jelurida.com/Lightweight_Contracts), created to participate in Ardors [online hackathon](https://www.jelurida.com/ardor-hackathon-2018). It should fullfill the requirements from Coding Challenge 3 (Identity Verification), where a contract should be developed to implement a blockchain based reputation system for Identity verification.
 
 ## Brief Description
 
