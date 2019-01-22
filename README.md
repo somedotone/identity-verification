@@ -86,6 +86,8 @@ The contract was created for Ardor version 2.2.1
 
 Have a look at the [informations repo](https://github.com/somedotone/informations)
 
+Have a look at the [wiki](https://github.com/somedotone/IdentityVerification/wiki)
+
 ## Next steps (in loose order)
 
 - updating contract to Ardor version 2.2.2
