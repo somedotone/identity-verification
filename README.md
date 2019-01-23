@@ -98,3 +98,4 @@ Have a look at the [wiki](https://github.com/somedotone/IdentityVerification/wik
 - implementing a proper logging system
 - decoupling the verification account from the accountVerificationRequest message to enable outsourcing of message handling. This could lead to services who pay the transaction fees and the price for a verification, so that a user can verify an account by just creating the verification token. A third party, for example, can provide this service for free or charge a user with a fiat currency, so that the user doesn't have to have any cryptocurrencies. Many other scenarios are imaginable.
 - stress testing the contract
+- rename parameters to improve readability
