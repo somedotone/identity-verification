@@ -37,7 +37,7 @@ You will get a payment transaction returned including the overpaid amount (amoun
 
 2. obtaining challenge text:  
 To obtain the challenge text, send a payment transaction with at least the fee amount of the returning payment transaction to the contract runner account and attach the following message:  
-`{"contract":"IdentityVerification","params:{"accountRS":"<accountRS involved verification>","resources":"<resource type>","type":"challengeTextRequest"}}`  
+`{"contract":"IdentityVerification","params":{"accountRS":"<accountRS involved verification>","resources":"<resource type>","type":"challengeTextRequest"}}`  
 You will get a payment transaction returned including the overpaid amount (amount from challengeTextRequest message - transaction fees) and a private message containing the challenge text and the signature. (See [wiki](https://github.com/somedotone/IdentityVerification/wiki) for parameter description)
 
 3. creating token:  
