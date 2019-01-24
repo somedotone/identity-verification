@@ -88,7 +88,7 @@ Have a look at the [informations repo](https://github.com/somedotone/information
 
 Have a look at the [wiki](https://github.com/somedotone/IdentityVerification/wiki)
 
-## Next steps (in loose order)
+## Further steps
 
 - updating contract to Ardor version 2.2.2
 
