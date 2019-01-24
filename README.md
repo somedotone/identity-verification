@@ -57,7 +57,7 @@ Whenever an error occurs (except when a message does not trigger the contract), 
 
 ## Demonstration
 
-There is a successfully proceed verification process on the Ardor testnet. It links [somedotone](https://github.com/somedotone) with its second testnet account ARDOR-4TGA-X2NT-875X-BH5X5. The contract created from the source code inside this repository was uploaded with the transaction identified by its fullHash: 8dde06360b7d4fe4523c2eecaa44a9f6b093e1fe917d2dbf00793751cef1298b.
+There is a successfully proceed verification process on the Ardor testnet. It links [some.one](https://github.com/somedotone) with its second testnet account ARDOR-4TGA-X2NT-875X-BH5X5. The contract created from the source code inside this repository was uploaded with the transaction identified by its fullHash: 8dde06360b7d4fe4523c2eecaa44a9f6b093e1fe917d2dbf00793751cef1298b.
 
 Following transactions are involved in the verification process:
 
