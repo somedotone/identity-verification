@@ -93,7 +93,7 @@ Have a look at the [wiki](https://github.com/somedotone/IdentityVerification/wik
 - updating contract to Ardor version 2.2.2
 
 - creating a Java client library to easily interact with the contract (already in progress)
-- creating a user friendly client (web based) (in concepting phase)
+- creating a user friendly web client (see [here](https://github.com/somedotone/WebClient))
 - adapting the contract to let it run with one account on two / multiple nodes (to have a backup runner)
 - implementing a proper logging system
 - decoupling the verification account from the accountVerificationRequest message to enable outsourcing of message handling. This could lead to services who pay the transaction fees and the price for a verification, so that a user can verify an account by just creating the verification token. A third party, for example, can provide this service for free or charge a user with a fiat currency, so that the user doesn't have to have any cryptocurrencies. Many other scenarios are imaginable.
