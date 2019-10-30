@@ -92,7 +92,7 @@ Have a look at our [youtube channel](https://www.youtube.com/channel/UCVvvRL0EmG
 
 ## Further steps
 
-- updating contract to Ardor version 2.2.2
+- updating contract to Ardor version 2.2.5
 
 - creating a Java client library to easily interact with the contract (already in progress)
 - creating a user friendly web client (see [here](https://github.com/somedotone/WebClient))
